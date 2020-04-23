@@ -1,4 +1,6 @@
-# [read it on gitbook](https://13424499957.gitbook.io/notes/)
+# read it on gitbook
+
+link to [gitbook](https://suki.gitbook.io/notes/)
 
 # Content
 
