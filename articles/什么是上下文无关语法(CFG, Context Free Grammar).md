@@ -95,7 +95,7 @@ P.S. 上述步骤中所有选择都是随机的。
 
 ![https://github.com/suukii/Articles/blob/master/assets/CFG_1.png](https://github.com/suukii/Articles/blob/master/assets/CFG_1.png)
 
-把树的所有子节点，也就是所有终结符连起来，我们就生成了一个句子 `Pretty girls like pink skirts` (BTW, it seems to rhyme!)。这个树一般叫做解析树(Parse Tree)，我们还可以创建另一棵树来生成另一个句子，步骤是一样的，只是其中的选择不同，不同的选择会生成不同的结果，比如 `Pretty skirts like pink girls`。
+把树的所有叶子节点，也就是所有终结符连起来，我们就生成了一个句子 `Pretty girls like pink skirts` (BTW, it seems to rhyme!)。这个树一般叫做解析树(Parse Tree)，我们还可以创建另一棵树来生成另一个句子，步骤是一样的，只是其中的选择不同，不同的选择会生成不同的结果，比如 `Pretty skirts like pink girls`。
 
 
 ## JavaScript 栗子
