@@ -1,6 +1,6 @@
-# Compiler & Interpreter
+# 【Crash Course】Compiler & Interpreter
 
-相似的是，两者都相当于一个翻译官，把程序员们写的高级语言翻译成电脑 CPU 可以读懂的机器语言。
+两者的相似点是，它们都像一个翻译官，负责把程序员们写的高级语言翻译成电脑 CPU 可以读懂的机器语言。
 
 ## A Story And Simile
 
