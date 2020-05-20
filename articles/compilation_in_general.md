@@ -12,7 +12,7 @@ var average = (min + max) / 2; // this is a comment
 
 parser 会给你吐出来这样一堆 token 来：
 
-![tokens](/assets/tokens_1.png)
+![tokens](../assets/tokens_1.png)
  
 注意到代码中的空格和注释都被忽略掉了，因为空格是没有意义的，而注释，根据定义它们本来就应该被忽略。
 
@@ -26,10 +26,10 @@ parser 会给你吐出来这样一堆 token 来：
 
 parser 的工作跟这个组装句子的过程很像，不过要更简单些，因为英语句子不仅要语法正确还要意思通顺，而 parser 就只需要考虑语法。它会按照指定的语法来把 token 组成表达式或者语句，并用一个树结构表示出来，这棵树就代表了源代码的逻辑。
 
-![ast](/assets/ast_example_1.png)
+![ast](../assets/ast_example_1.png)
 
 * 这棵树也有不同名字：parse tree, abstract syntax tree (AST), syntax tree，指的都是同一个东西。
-* 每个语言都有自己的语法，一般编程语言都是使用[上下文无关语法](/articles/%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E8%AF%AD%E6%B3%95(CFG%2C%20Context%20Free%20Grammar).md)来制定自己的语法的。
+* 每个语言都有自己的语法，一般编程语言都是使用[上下文无关语法](./context_free_grammar.md)来制定自己的语法的。
 
 P.S. 注意到这棵树并没有用到 lexer 给出来的所有 token。Abstract syntax tree 之所以叫 'abstract' 呢，是因为它并没有把代码的所有细节都展示出来(不同于 concrete syntax tree)，它只关心结构和内容相关的部分(可以说是有用的部分吧)。
 
@@ -143,7 +143,7 @@ var area = 9.71
 
 运行程序最快的方法当然是将源码提前编译成 native code 啦，不过这样会有 OS 兼容问题，而 Just-in-time Compiler 会在运行程序的时候再把代码编译成对应各个 OS 的 native code。
 
-[【Crash Course】Just-In-Time (JIT) Compilers](/articles/%E3%80%90Crash%20Course%E3%80%91Just-In-Time%20(JIT)%20Compilers.md)
+[【Crash Course】Just-In-Time (JIT) Compilers](./just_in_time_compiler.md)
 
 ## Compiler & Interpreter
 
@@ -153,4 +153,4 @@ var area = 9.71
 
 - Interpreter: 直接运行源代码。
 
-[【Crash Course】Compiler&Interpreter.md](/articles/%E3%80%90Crash%20Course%E3%80%91Compiler%26Interpreter.md)
+[【Crash Course】Compiler&Interpreter.md](./compiler_and_interpreter.md)

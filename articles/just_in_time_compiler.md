@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[【Crash Course】Compiler & Interpreter](https://github.com/suukii/Articles/blob/master/articles/%E3%80%90Crash%20Course%E3%80%91Compiler%26Interpreter.md) 这篇介绍了 Compiler 和 Interpreter 以及它们各自的优缺点，我们先来简单回顾一下。
+[【Crash Course】Compiler & Interpreter](./compiler_and_interpreter.md) 这篇介绍了 Compiler 和 Interpreter 以及它们各自的优缺点，我们先来简单回顾一下。
 
 - Compiler: 事先把源码编译成机器语言，在需要执行程序的时候直接运行编译后的代码。因为编译工作是事先完成的，所以 Compiler 在编译的时候有充足的时间好好分析源码，并对其进行优化，生成运行速度更快的代码。
 
