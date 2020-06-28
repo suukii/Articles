@@ -8,6 +8,7 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 
 # Content
 
+* [【网络】DNS 是如何工作的](./articles/how_dns_works.md)
 * [【数据结构】图](./articles/graph_data_structure.md)
 * [【设计模式】单例模式](./articles/design_pattern_singleton.md)
 * [【设计模式】策略模式](./articles/design_pattern_strategy.md)
