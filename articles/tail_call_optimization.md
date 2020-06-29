@@ -43,6 +43,5 @@ https://2ality.com/2015/06/tail-call-optimization.html#checking-whether-a-functi
 ## 相关资料
 
 - https://v8.dev/blog/modern-javascript#proper-tail-calls
-- https://2ality.com/2015/06/tail-call-optimization.html#checking-whether-a-function-call-is-in-a-tail-position
 - https://2ality.com/2015/06/tail-call-optimization.html
 - https://github.com/tc39/proposal-ptc-syntax
