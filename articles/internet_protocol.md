@@ -17,7 +17,7 @@
 
 ## 报文格式 Packet Format
 
-![](../assets/IPv4_headers.png)
+![IPv4_headers](../assets/network/IPv4_headers.png)
 
 * Version：IP 版本。
 
@@ -58,4 +58,4 @@
 
 跟分割操作不同的是，报文重组只会发生在目的机。无论一个报文在路由的过程中被分割了多少次，这些报文片段都只会在到达目的机之后再被重组。但如果有一个报文分组丢失了，目的机还是会尝试重组其他报文片段，并最终放弃重组，这种无谓地消耗资源的行为可能会导致 denial-of-service 攻击，所以应该尽量避免报文分割。目前推荐使用的方法是 path MTU discovery，也就是找到从源机到目的机所遇到的所有网络的最小 MTU，把 IP 报文大小定为这个 MTU 值，从而避免了报文分割。
 
-![](../assets/ip-fragmentation.png)
+![](../assets/network/ip_fragmentation.png)
