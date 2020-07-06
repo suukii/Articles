@@ -11,11 +11,14 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 - [【浏览器】深入理解现代浏览器](./articles/inside_look_browser.md)
 - [【JavaScript】尾调用优化 TCO](./articles/tail_call_optimization.md)
 - [【JavaScript】4 种常见的内存泄漏及解决方法](./articles/4_common_memory_leak.md)
-- [【网络】HTTP 缓存](./articles/caching.md) 🆕
+- [【安全】CSP 内容安全策略](./articles/what_is_CSP.md)
+- [【性能】如何优化图片资源](./articles/optimize_images.md) 🆕
+- [【性能】HTTP 缓存](./articles/caching.md)
 - [【网络】Internet Protocol](./articles/internet_protocol.md)
 - [【网络】DNS 是如何工作的](./articles/how_dns_works.md)
 - [【网络】如何分辨 same-site 和 same-origin](./articles/same_site_&_same_origin.md)
-- [【数据结构】图](./articles/graph_data_structure.md)
+- [【DSA】图](./articles/graph_data_structure.md)
+- [【DSA】Big O 算法复杂度](./articles/big_O_complexity.md) 🆕
 - [【设计模式】单例模式](./articles/design_pattern_singleton.md)
 - [【设计模式】策略模式](./articles/design_pattern_strategy.md)
 - [【设计模式】代理模式](./articles/design_pattern_proxy.md)
