@@ -1,8 +1,8 @@
-# 【Crash Course】Just-In-Time (JIT) Compilers
+# Just-In-Time (JIT) Compilers
 
 ## Introduction
 
-[【Crash Course】Compiler & Interpreter](./compiler_and_interpreter.md) 这篇介绍了 Compiler 和 Interpreter 以及它们各自的优缺点，我们先来简单回顾一下。
+[Compiler & Interpreter](./compiler_and_interpreter.md) 这篇介绍了 Compiler 和 Interpreter 以及它们各自的优缺点，我们先来简单回顾一下。
 
 - Compiler: 事先把源码编译成机器语言，在需要执行程序的时候直接运行编译后的代码。因为编译工作是事先完成的，所以 Compiler 在编译的时候有充足的时间好好分析源码，并对其进行优化，生成运行速度更快的代码。
 
@@ -37,7 +37,6 @@ Optimizing Compiler 负责将源代码编译成优化程度更高的代码，编
 - 如果一行代码被重复执行了几次，`monitor` 会将它标记为 `warm`，JIT 就会把它送到 Baseline Compiler 去编译，然后把编译后的代码存起来。
 
 - 如果一行代码被重复执行了很多很多次，它就会被标记为 `hot`，JIT 就会把它送到 Optimizing Compiler 去编译，然后把编译后的代码存起来。
-
 
 ## Extension
 

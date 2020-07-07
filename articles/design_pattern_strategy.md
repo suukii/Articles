@@ -1,4 +1,4 @@
-# 【设计模式】策略模式
+# 策略模式
 
 ## 问题
 
@@ -105,7 +105,7 @@ class SimpleMath {
       ['ADD']: (a, b) => a + b,
       ['MINUS']: (a, b) => a - b,
       ['MULTIPLY']: (a, b) => a * b,
-      ['DIVIDE']: (a, b) => a / b,
+      ['DIVIDE']: (a, b) => a / b
     }
   }
   calculate(a, b, operation) {
@@ -180,4 +180,4 @@ multiply(1, 2) // 2
 
 Client 通过调用 Context 并指定某个 Strategy 来间接调用相应 Strategy 的某个方法。
 
->> 其实不用 class 来实现，只要是符合这种思想的都是策略模式吧，把 strategy 拆分成函数也行吧，个人看法个人看法。
+> > 其实不用 class 来实现，只要是符合这种思想的都是策略模式吧，把 strategy 拆分成函数也行吧，个人看法个人看法。

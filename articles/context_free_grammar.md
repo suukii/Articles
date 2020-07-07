@@ -1,5 +1,4 @@
-# 什么是上下文无关语法(CFG, Context Free Grammar)
-
+# 什么是上下文无关语法
 
 从名字可以看出，既然上下文无关语法(Context Free Grammar, 以下简称 CFG)被称为“语法”，说明它就是一套规则，是用来规定语句是如何生成的。
 
@@ -14,7 +13,6 @@
 
 虽然 CFG 不能用来描述自然语言(因为自然语言一般都需要考虑上下文)，但我们还是可以用 CFG 来描述自然语言的语法和句子结构的，或许，我们可以把英语语法想象成 `CFG + 上下文`，在不考虑上下文的情况下(也就是不管语句是否意思通顺，只要语句结构符合语法规定它就是正确的)，我们完全可以使用 CFG 来描述英语语法。
 
-
 ## CFG 的组成
 
 首先来熟悉一下几个相关词汇：
@@ -23,7 +21,6 @@
 - Non Terminals(非终结符)：也被称为变量，可以认为非终结符是终结符或其他非终结符的占位符。
 - Start Symbol(开始变量)：也是一个非终结符，由于是语法规则的开始，所以也被称为开始变量。
 - Production Rules(规则/产生式)：语法规则，用来描述一个句子是怎样产生的。
-
 
 ## 来一个英语栗子
 
@@ -96,7 +93,6 @@ P.S. 上述步骤中所有选择都是随机的。
 ![https://github.com/suukii/Articles/blob/master/assets/CFG_1.png](https://github.com/suukii/Articles/blob/master/assets/CFG_1.png)
 
 把树的所有叶子节点，也就是所有终结符连起来，我们就生成了一个句子 `Pretty girls like pink skirts` (BTW, it seems to rhyme!)。这个树一般叫做解析树(Parse Tree)，我们还可以创建另一棵树来生成另一个句子，步骤是一样的，只是其中的选择不同，不同的选择会生成不同的结果，比如 `Pretty skirts like pink girls`。
-
 
 ## JavaScript 栗子
 

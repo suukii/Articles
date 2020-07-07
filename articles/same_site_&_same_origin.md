@@ -1,12 +1,14 @@
+# 如何分辨同源和同
+
 ## Origin
 
-`scheme` + `hostname` + `port` 都一样的两个 URL 才会被认为是 Same-Origin，否则就是 Cross-Origin。
+`scheme` + `hostname` + `port` 都一样的两个 URL 才会被认为是同源(Same-Origin)，否则就是 Cross-Origin。
 
 ![](../assets/same_origin_cross_origin.png)
 
 ## Site
 
-`Top-level domain (TLD)` + `TLD 前面的那部分 domain` 相同的两个 URL 就是 Same-Site，否则就是 Cross-Site。
+`Top-level domain (TLD)` + `TLD 前面的那部分 domain` 相同的两个 URL 就是同站(Same-Site)，否则就是 Cross-Site。
 
 ![](../assets/same_site_cross_site.png)
 

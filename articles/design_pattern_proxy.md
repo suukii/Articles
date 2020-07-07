@@ -1,4 +1,4 @@
-# 【设计模式】代理模式
+# 代理模式
 
 ## 目的
 
@@ -18,7 +18,6 @@
 用图解释大概是这个样子：
 
 ![../assets/proxy_design_pattern_1.png](../assets/proxy_design_pattern_1.png)
-
 
 ## 应用
 

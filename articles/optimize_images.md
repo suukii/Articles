@@ -1,3 +1,5 @@
+# 如何优化图片资源
+
 ## 使用 imagemin 来压缩图片
 
 imagemin 是一个图片压缩工具，它提供 [CLI](https://www.npmjs.com/package/imagemin-cli) 和 [npm module](https://www.npmjs.com/package/imagemin) 两种使用方式，一般推荐使用 npm module 形式，因为它能提供更多配置选项，也可以嵌入到 `webpack` 等工具的打包流程中，另外还有一系列配套的插件来处理不同格式的图片文件。

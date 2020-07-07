@@ -1,6 +1,6 @@
-# 尾调用优化 Tail Call Optimization
+# 尾调用优化
 
-虽然尾调用优化是 ES6 规范中的一部分，但其实[大部分 JS 引擎都没有实现](https://kangax.github.io/compat-table/es6/#test-proper_tail_calls_(tail_call_optimisation))。
+虽然尾调用优化(Tail Call Optimization)是 ES6 规范中的一部分，但其实[大部分 JS 引擎都没有实现](<https://kangax.github.io/compat-table/es6/#test-proper_tail_calls_(tail_call_optimisation)>)。
 
 ## 什么是尾调用优化？
 
