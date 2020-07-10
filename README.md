@@ -22,8 +22,9 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 
 **数据结构算法**
 
-- [图](./articles/graph_data_structure.md)
-- [Big O 算法复杂度](./articles/big_O_complexity.md) 🆕
+- [二叉树](./articles/dsa_binary_tree.md) 🆕
+- [图](./articles/dsa_graph.md)
+- [Big O 算法复杂度](./articles/big_O_complexity.md)
 
 **安全**
 
@@ -31,7 +32,7 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 
 **性能**
 
-- [如何优化图片资源](./articles/optimize_images.md) 🆕
+- [如何优化图片资源](./articles/optimize_images.md)
 - [HTTP 缓存](./articles/caching.md)
 
 **网络**
