@@ -81,7 +81,7 @@ class UnionFind {
 
 合并之后：{1, 2, 3, 4}，代表是 1
 
-现在 3 指向了 1，不过原来集合 Y 中的其他元素还是指向原来的代表，也就是 4 还是指向 3。所以我们调用 `Find-Set(4)` 的时候，是先找到了 3，再顺着 3 找到 1，才能判断 4 在这个集合中。而**路径压缩**就是，当我们找到 1 的时候，顺便更新 4 的“指针”，让它也指向 1，这样下次查询的时候，查询路径的缩短了。
+现在 3 指向了 1，不过原来集合 Y 中的其他元素还是指向原来的代表，也就是 4 还是指向 3。所以我们调用 `Find-Set(4)` 的时候，是先找到了 3，再顺着 3 找到 1，才能判断 4 在这个集合中。而**路径压缩**就是，当我们找到 1 的时候，顺便更新 4 的“指针”，让它也指向 1，这样下次查询的时候，查询路径就缩短了。
 
 TypeScript Code
 
@@ -142,3 +142,8 @@ class UnionFind {
 复杂度证明比较复杂，我不想头秃，就不看了，直接贴一下结论。
 
 -   时间复杂度：$O(α(n))$，$α(n)$ 是 [inverse Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function#Inverse)，不管 n 是多少，$α(n)$ 都小于 5。
+
+## 相关资料
+
+-   [x] [Using Disjoint Set (Union-Find) To Build A Maze Generator](https://coderscat.com/using-disjoint-set-union-find-to-create-maze)
+-   [x] [Disjoint Set Data Structure](https://www.topcoder.com/community/competitive-programming/tutorials/disjoint-set-data-structures/)
