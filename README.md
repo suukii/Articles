@@ -22,7 +22,7 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 
 **数据结构算法**
 
--   [并查集](./articles/dsa_union_find.md) 🆕
+-   [并查集](./articles/dsa_union_find.md)
 -   [二叉树](./articles/dsa_binary_tree.md)
 -   [前缀树 Trie](./articles/dsa_trie.md)
 -   [图](./articles/dsa_graph.md)
@@ -30,6 +30,7 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 
 **安全**
 
+-   [点击劫持](./articles/clickjacking.md) 🆕
 -   [CSP 内容安全策略](./articles/what_is_CSP.md)
 
 **性能**
