@@ -1,4 +1,4 @@
-# TypeScript 中的任意属性 (Indexable Types)
+# TypeScript 学习笔记 - 任意属性 (Indexable Types)
 
 -   [官方文档](https://www.typescriptlang.org/docs/handbook/interfaces.html#indexable-types)
 
@@ -12,13 +12,13 @@
 
 ```ts
 interface A {
-    [prop: string]: number
+    [prop: string]: number;
 }
 
 const obj: A = {
     a: 1,
     b: 3,
-}
+};
 ```
 
 `[prop: string]: number` 的意思是，`A` 类型的对象可以有任意属性签名，`string` 指的是对象的键都是字符串类型的，`number` 则是指定了属性值的类型。
@@ -31,10 +31,10 @@ const obj: A = {
 
 ```ts
 interface B {
-    [index: number]: string
+    [index: number]: string;
 }
 
-const arr: B = ['suukii']
+const arr: B = ['suukii'];
 ```
 
 `[index: number]: string` 的意思是，`B` 类型的数组可以有任意的数字下标，而且数组的成员的类型必须是 `string`。
@@ -47,8 +47,8 @@ const arr: B = ['suukii']
 
 ```ts
 interface C {
-    [prop: string]: number
-    [index: number]: string
+    [prop: string]: number;
+    [index: number]: string;
 }
 
 // Numeric index type 'string' is not assignable to string index type 'number'.
@@ -60,8 +60,8 @@ interface C {
 
 ```ts
 interface C {
-    [prop: string]: object
-    [index: number]: Function
+    [prop: string]: object;
+    [index: number]: Function;
 }
 ```
 
@@ -73,9 +73,9 @@ interface C {
 
 ```ts
 interface Person {
-    name: string
-    age?: number
-    [prop: string]: string
+    name: string;
+    age?: number;
+    [prop: string]: string;
 }
 
 // Property 'age' of type 'number' is not assignable to string index type 'string'.
@@ -85,9 +85,9 @@ interface Person {
 
 ```ts
 interface Person {
-    name: string
-    age?: number
-    [prop: string]: string | number
+    name: string;
+    age?: number;
+    [prop: string]: string | number;
 }
 ```
 
@@ -95,9 +95,9 @@ interface Person {
 
 ```ts
 type MyArray = {
-    0: string
-    [index: number]: number
-}
+    0: string;
+    [index: number]: number;
+};
 // Property '0' of type 'string' is not assignable to numeric index type 'number'.
 ```
 
@@ -105,9 +105,9 @@ type MyArray = {
 
 ```ts
 type Arg = {
-    [index: number]: number
-    length: string
-}
+    [index: number]: number;
+    length: string;
+};
 ```
 
 如上，虽然指定了 `number` 类型的任意属性的类型是 `number`，但 `length` 属性是 `string` 类型的签名，所以不受前者的影响。
