@@ -20,6 +20,10 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 -   [尾调用优化 TCO](./articles/tail_call_optimization.md)
 -   [4 种常见的内存泄漏及解决方法](./articles/4_common_memory_leak.md)
 
+**TypeScript**
+
+-   [任意属性 Indexable Types](./articles/typescript_indexable_types.md) 🆕
+
 **数据结构算法**
 
 -   [递归](./articles/dsa_recursion.md) 🆕
