@@ -20,7 +20,8 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 
 **TypeScript**
 
--   [infer 关键字](./articles/typescript_infer.md) 🆕
+-   [infer](./articles/typescript_infer.md) 🆕
+-   [as const](./articles/typescript_as_const.md) 🆕
 -   [任意属性 Indexable Types](./articles/typescript_indexable_types.md) 🆕
 
 **数据结构算法**
