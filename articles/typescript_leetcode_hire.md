@@ -298,4 +298,4 @@ type Connect = (module: EffectModule) => MakeConnected<typeof module>;
 
 其实这样子分析完之后发现，这道题目也没有特别复杂嘛，主要还是自己学得太少。
 
-完整的代码在[这里](https://github.com/suukii/daily/collections/lc_hire_typescript.ts)。
+完整的代码在[这里](https://github.com/suukii/daily/blob/master/collections/lc_hire_typescript.ts)。
