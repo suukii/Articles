@@ -20,6 +20,7 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 
 **TypeScript**
 
+-   [Leetcode 面试题](./articles/typescript_leetcode_hire.md) 🆕
 -   [infer](./articles/typescript_infer.md) 🆕
 -   [as const](./articles/typescript_as_const.md) 🆕
 -   [任意属性 Indexable Types](./articles/typescript_indexable_types.md) 🆕
