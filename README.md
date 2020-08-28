@@ -42,6 +42,7 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 -   [前缀树 Trie](./articles/dsa_trie.md)
 -   [图](./articles/dsa_graph.md)
 -   [Big O 算法复杂度](./articles/big_O_complexity.md)
+-   [哈希表](./articles/dsa_hashtable.md) 🆕
 
 **安全**
 
