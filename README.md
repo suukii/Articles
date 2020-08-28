@@ -20,14 +20,23 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 
 **TypeScript**
 
--   [Leetcode 面试题](./articles/typescript_leetcode_hire.md) 🆕
--   [infer](./articles/typescript_infer.md) 🆕
--   [as const](./articles/typescript_as_const.md) 🆕
--   [任意属性 Indexable Types](./articles/typescript_indexable_types.md) 🆕
+-   [Leetcode 面试题](./articles/typescript_leetcode_hire.md)
+-   [infer](./articles/typescript_infer.md)
+-   [as const](./articles/typescript_as_const.md)
+-   [任意属性 Indexable Types](./articles/typescript_indexable_types.md)
 
 **数据结构算法**
 
--   [递归](./articles/dsa_recursion.md) 🆕
+**排序** 🆕
+
+-   [冒泡排序](./articles/sorting/bubble_sort.md)
+-   [选择排序](./articles/sorting/selection_sort.md)
+-   [插入排序](./articles/sorting/insertion_sort.md)
+-   [归并排序](./articles/sorting/merge_sort.md)
+
+**其他**
+
+-   [递归](./articles/dsa_recursion.md)
 -   [并查集](./articles/dsa_union_find.md)
 -   [二叉树](./articles/dsa_binary_tree.md)
 -   [前缀树 Trie](./articles/dsa_trie.md)
