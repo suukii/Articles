@@ -1,4 +1,4 @@
-# 如何分辨同源和同
+# 如何分辨同源和同站
 
 ## Origin
 
@@ -22,7 +22,7 @@
 
 用来判断请求是否 Same-Site 或者 Same-Origin，目前只有 Chrome 支持这个头部字段，其值为以下之一：
 
-- cross-site
-- same-site
-- same-origin
-- none
+-   cross-site
+-   same-site
+-   same-origin
+-   none
