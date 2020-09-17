@@ -1,5 +1,12 @@
 # 从零实现一个简单的 VDOM 引擎
 
+## 要实现的功能
+
+1. `h` 创建 VNode
+2. `mount` 挂载 VNode
+3. `unmount` 移除 VNode
+4. `patch` 替换 VNode
+
 ## 什么是 VDOM？
 
 简单复习一下概念，VDOM 就是用 JS 对象来描述真实的 DOM；相比真实 DOM，VDOM 没有那么多属性，操作起来开销更小。
@@ -206,151 +213,4 @@ patchChildren(n1, n2);
 
 ## 完整代码
 
-```js
-const $ = document.querySelector.bind(document);
-const container = $('#app');
-
-const span = h('span', {}, 'Hello World!');
-const h1 = h('h1', { id: 'title' }, [span]);
-mount(h1, container);
-
-// test
-
-// 1. tag 不同
-const i = h('i', {}, 'suukii');
-setTimeout(() => {
-    patch(span, i);
-}, 2000);
-
-// 2.1. tag 不同，n2.children 是字符串
-const strong = h('strong', {}, 'suukii');
-setTimeout(() => {
-    patch(i, strong);
-}, 4000);
-
-// 2.2. n2.children 是 VNode 数组
-
-const list3 = h('ol', { class: 'list' }, li(3, { class: 'one' }));
-setTimeout(() => {
-    patch(strong, list3);
-}, 6000);
-
-// n2.children 长度大于 n1.children
-const list5 = h('ol', { class: 'list' }, li(5, { class: 'two' }));
-setTimeout(() => {
-    patch(list3, list5);
-}, 8000);
-
-// n2.children 长度小于 n1.children
-const list2 = h('ol', { class: 'list' }, li(2, { class: 'three' }));
-setTimeout(() => {
-    patch(list5, list2);
-}, 10000);
-
-function li(num, props = {}) {
-    return Array(num)
-        .fill(0)
-        .map((_, i) => h('li', props, `item-${i + 1}`));
-}
-
-// *****************************************
-
-function h(tag, props, children) {
-    return {
-        tag,
-        props,
-        children,
-    };
-}
-
-function mount(vnode, container) {
-    const { tag, props, children } = vnode;
-
-    vnode.el = document.createElement(tag);
-
-    setProps(vnode.el, props);
-    setChildren(vnode.el, children);
-
-    container.appendChild(vnode.el);
-
-    // ******************************
-
-    function setChildren(el, children) {
-        if (typeof children == 'string') {
-            el.textContent = children;
-        } else {
-            children.forEach(child => mount(child, el));
-        }
-    }
-}
-
-function setProps(ele, props) {
-    for (const [key, value] of Object.entries(props)) {
-        ele.setAttribute(key, value);
-    }
-}
-
-function unmount(vnode) {
-    vnode.el.parentNode.removeChild(vnode.el);
-}
-
-function patch(n1, n2) {
-    // 用 n2 替换 n1
-
-    const el = n1.el;
-    n2.el = el;
-
-    if (n1.tag !== n2.tag) {
-        // 1. tag 不同，整个替换
-        mount(n2, el.parentNode);
-        unmount(n1);
-    } else {
-        // 2. tag 相同
-
-        if (typeof n2.children == 'string') {
-            // 2.1 n2.children 是字符串，直接替换字符串内容
-            el.textContent = n2.children;
-            // 并设置新的标签属性
-            setProps(el, n2.props);
-        } else {
-            // 2.2 n2.children 是 VNode 数组
-            patchChildren(n1, n2);
-        }
-    }
-
-    // ***********************************
-
-    function patchChildren(n1, n2) {
-        const c1 = n1.children;
-        const c2 = n2.children;
-        const commonLen = Math.min(
-            typeof c1 == 'string' ? 0 : c1.length,
-            c2.length,
-        );
-
-        // 共同长度的部分，直接调用 patch
-        for (let i = 0; i < commonLen; i++) {
-            patch(c1[i], c2[i]);
-        }
-        // n1 多出来的子节点，unmount 掉
-        if (c1.length > commonLen) {
-            for (let i = commonLen; i < c1.length; i++) {
-                unmount(c1[i]);
-            }
-        }
-        // n2 多出来的子节点，mount 它们
-        if (c2.length > commonLen) {
-            for (let i = commonLen; i < c2.length; i++) {
-                mount(c2[i], n2.el);
-            }
-        }
-    }
-}
-```
-
-```html
-<body>
-    <div id="app"></div>
-    <script src="./index.js"></script>
-</body>
-```
+[完整代码](https://gist.github.com/suukii/74763ff725470c2811a13a9dc516d371)
