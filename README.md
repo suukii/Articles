@@ -27,6 +27,10 @@ link to [gitbook](https://suki.gitbook.io/notes/)
 -   [as const](./articles/typescript/typescript_as_const.md)
 -   [任意属性 Indexable Types](./articles/typescript/typescript_indexable_types.md)
 
+**VUE**
+
+-   [从零实现一个简单的 VDOM 引擎](./articles/vue/virtual_dom.md)
+
 **数据结构算法**
 
 **排序**
