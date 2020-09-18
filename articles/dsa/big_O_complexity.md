@@ -1,5 +1,7 @@
 # Big O 算法复杂度
 
+[bigocheatsheet](https://www.bigocheatsheet.com/)
+
 ## 循环 - 时间复杂度
 
 <table border="1" width="700">
@@ -104,15 +106,15 @@ O(n^3)
 
 一个简单的公式是：`O(b^d)`
 
-- b 是递归树的最大分支数，也就是在一个函数中，最多调用了多少次递归函数。
-- d 是递归树的最大深度。
+-   b 是递归树的最大分支数，也就是在一个函数中，最多调用了多少次递归函数。
+-   d 是递归树的最大深度。
 
 以 Fibonacci 的递归函数为例：
 
 ```js
 function fib(n) {
-  if (n <= 1) return 1
-  return fib(n - 1) + fib(n - 2)
+    if (n <= 1) return 1;
+    return fib(n - 1) + fib(n - 2);
 }
 ```
 
@@ -120,8 +122,8 @@ function fib(n) {
 
 ![](../assets/recursion_tree.png)
 
-- 在每个 `fib` 函数中，`fib` 都被调用了两次，所以递归树的最大分支数是 2
-- 递归树的最大深度是 n
+-   在每个 `fib` 函数中，`fib` 都被调用了两次，所以递归树的最大分支数是 2
+-   递归树的最大深度是 n
 
 如果把这棵树填满的话，那它会有
 

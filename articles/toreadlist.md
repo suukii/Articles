@@ -5,6 +5,10 @@
 -   [ ] [Exploring ES6](https://exploringjs.com/es6/index.html)
 -   [ ] [What the heck is a 'thunk'?](https://daveceddia.com/what-is-a-thunk/)
 
+### 打包工具
+
+-   [ ] [webpack deep dive](https://peerigon.github.io/talks/2018-09-28-hackerkiste-webpack-deep-dive)
+
 ### Git
 
 -   [ ] [Git tags : Explained](https://mohitkhare.me/blog/git-tags-explained/)
@@ -40,10 +44,24 @@
 -   [ ] [What JavaScript Developers Should Know About Curl](http://thecodebarbarian.com/what-javascript-developers-should-know-about-curl.html)
 -   [ ] [The Front-End Developer Handbook is Still the Best in 2020](https://booksoncode.com/articles/front-end-developer-handbook-2019)
 
--   [Markdown 中插入数学公式的方法](https://github.com/xiahouzuoxin/notes/blob/master/essays/Markdown%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95.md)
+-   [ ] [Markdown 中插入数学公式的方法](https://github.com/xiahouzuoxin/notes/blob/master/essays/Markdown%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95.md)
 
--   [VUE 资源](https://github.com/vuejs/awesome-vue)
+-   [ ] [VUE 资源](https://github.com/vuejs/awesome-vue)
 
--   [自建组件库/共享组件库](https://docs.bit.dev/docs/bit-dev)
+-   [ ] [自建组件库/共享组件库](https://docs.bit.dev/docs/bit-dev)
 
 -   [ ] [垃圾回收](https://deepu.tech/memory-management-in-v8/)
+        https://hackernoon.com/modern-front-end-architecture-iyx3ur5
+
+**关于 Babel**
+
+https://www.valentinog.com/blog/preset-env/
+https://alexbogovich.com/blog/core-js/
+https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md
+https://kleopetrov.me/2016/03/18/everything-about-babel/
+https://flaviocopes.com/babel/
+https://blog.jakoblind.no/babel-preset-env/
+
+**面试题**
+
+https://github.com/yangshun/front-end-interview-handbook
