@@ -59,6 +59,7 @@
 -   [选择排序](./articles/sorting/selection_sort.md)
 -   [插入排序](./articles/sorting/insertion_sort.md)
 -   [归并排序](./articles/sorting/merge_sort.md)
+-   [计数排序](./articles/sorting/counting_sort.md)
 
 ### 安全
 
