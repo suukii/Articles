@@ -45,13 +45,14 @@
 ### 数据结构算法
 
 -   [Big O 算法复杂度](./articles/dsa/big_O_complexity.md)
--   [并查集](./articles/dsa/dsa_union_find.md)
--   [前缀树 Trie](./articles/dsa/dsa_trie.md)
 -   [栈和队列](./articles/dsa/dsa_stack_and_queue.md)
--   [二叉树](./articles/dsa/dsa_binary_tree.md)
 -   [哈希表](./articles/dsa/dsa_hashtable.md)
 -   [递归](./articles/dsa/dsa_recursion.md)
+-   [并查集](./articles/dsa/dsa_union_find.md)
 -   [图](./articles/dsa/dsa_graph.md)
+-   [二叉树](./articles/dsa/dsa_binary_tree.md)
+-   [前缀树 Trie](./articles/dsa/dsa_trie.md)
+-   [AVL 树](./articles/dsa/dsa_avl_tree.md.md)
 
 **排序**
 
