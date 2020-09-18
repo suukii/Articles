@@ -157,4 +157,4 @@ class Dep {
 
 [完整代码](https://gist.github.com/suukii/ed55d5d1b155ea01ca3a35fd52cd30ce)
 
-> PS. 如果有人对完整代码中的 autorun 函数有疑问的话，可以看下[这里](https://github.com/suukii/vue-exercises/blob/master/1-reactivity.md#%E8%AE%A8%E8%AE%BA)，注意，个人理解而已。
+> PS. 如果有人对完整代码中的 autorun 函数有疑问的话，可以看下[这里](https://github.com/suukii/frontendmasters/blob/master/advanced-vuejs-features-from-the-ground-up/1-reactivity.md#%E8%AE%A8%E8%AE%BA)，注意，个人理解而已。
