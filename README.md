@@ -4,18 +4,20 @@
 
 ## Content
 
--   [浏览器](#浏览器)
--   [JavaScript](#javascript)
--   [TypeScript](#typescript)
--   [Vue](#vue)
--   [数据结构算法](#数据结构算法)
--   [安全](#安全)
--   [性能](#性能)
--   [网络](#网络)
--   [设计模式](#设计模式)
--   [单元测试](#单元测试)
--   [编译](#编译)
--   [其他](#其他)
+- [持续更新中...](#持续更新中)
+  - [Content](#content)
+    - [浏览器](#浏览器)
+    - [JavaScript](#javascript)
+    - [TypeScript](#typescript)
+    - [Vue](#vue)
+    - [数据结构算法](#数据结构算法)
+    - [安全](#安全)
+    - [性能](#性能)
+    - [网络](#网络)
+    - [设计模式](#设计模式)
+    - [单元测试](#单元测试)
+    - [编译](#编译)
+    - [杂七杂八](#杂七杂八)
 
 ### 浏览器
 
@@ -97,6 +99,7 @@
 -   [Just-In-Time (JIT) Compilers](./articles/compile/just_in_time_compiler.md)
 -   [编译流程](./articles/compile/compilation_in_general.md)
 
-### 其他
+### 杂七杂八
 
+-   [如何在终端打印出有<b style="background: -webkit-linear-gradient(45deg, #99d4ff, #9384f6);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">颜色</b>的字](./articles/others/print-colored-text-in-terminal.md)
 -   [什么是上下文无关语法 CFG](./articles/context_free_grammar.md)
