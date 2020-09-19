@@ -37,33 +37,33 @@ TypeScript Code
 
 ```ts
 class UnionFind {
-    private parents: Array<number>
+    private parents: Array<number>;
 
     constructor(size: number) {
         // 初始化 parents 数组
         // 一开始每个元素都在不同的集合中，每个元素的代表都是它们自己
         this.parents = Array(size)
             .fill(0)
-            .map((_, i) => i)
+            .map((_, i) => i);
     }
 
     findSet(x: number): number {
         // 递归地找到集合的代表
         if (x !== this.parents[x]) {
-            return this.findSet(this.parents[x])
+            return this.findSet(this.parents[x]);
         }
-        return this.parents[x]
+        return this.parents[x];
     }
 
     unionSet(x: number, y: number): void {
         // 分别找到 x 和 y 所在的集合
-        const rootx: number = this.findSet(x)
-        const rooty: number = this.findSet(y)
+        const rootx: number = this.findSet(x);
+        const rooty: number = this.findSet(y);
         // 如果 x 和 y 在同一集合中，什么都不做
-        if (rootx === rooty) return
+        if (rootx === rooty) return;
         // 如果 x 和 y 在不同集合中，
         // 将 y 所在集合的代表指向 x 所在集合的代表
-        this.parents[rooty] = rootx
+        this.parents[rooty] = rootx;
     }
 }
 ```
@@ -92,12 +92,16 @@ class UnionFind {
     findSet(x: number): number {
         // 递归地找到集合的代表
         if (x !== this.parents[x]) {
--           return this.findSet(this.parents[x])
-+           this.parents[x] = this.findSet(this.parents[x])
+            this.parents[x] = this.findSet(this.parents[x]);
         }
-        return this.parents[x]
+        return this.parents[x];
     }
 }
+```
+
+```diff
+- return this.findSet(this.parents[x])
++ this.parents[x] = this.findSet(this.parents[x])
 ```
 
 ### Rank
@@ -113,25 +117,25 @@ TypeScript Code
 ```ts
 class UnionFind {
     // ...
-    private rank: Array<number>
+    private rank: Array<number>;
 
     constructor(size: number) {
         // 初始化为 0
-        this.rank = Array(size).fill(0)
+        this.rank = Array(size).fill(0);
     }
 
     unionSet(x: number, y: number): void {
-        const rootx: number = this.findSet(x)
-        const rooty: number = this.findSet(y)
-        if (rootx === rooty) return
+        const rootx: number = this.findSet(x);
+        const rooty: number = this.findSet(y);
+        if (rootx === rooty) return;
 
         // 把“较矮”的合并到“较高”的中
         if (this.rank[rootx] > this.rank[rooty]) {
-            this.parents[rooty] = rootx
+            this.parents[rooty] = rootx;
         } else {
-            this.parents[rootx] = rooty
+            this.parents[rootx] = rooty;
             // 如果两者高度一样，合并后更新“被并入的那个集合”的 rank
-            this.rank[rootx] === this.rank[rooty] && ++this.rank[rooty]
+            this.rank[rootx] === this.rank[rooty] && ++this.rank[rooty];
         }
     }
 }

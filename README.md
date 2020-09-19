@@ -2,10 +2,7 @@
 
 个人学习笔记。你也可以在 [Gitbook](https://suki.gitbook.io/notes/) 上看，内容是自动同步的。
 
-## Content
-
 - [持续更新中...](#持续更新中)
-  - [Content](#content)
     - [浏览器](#浏览器)
     - [JavaScript](#javascript)
     - [TypeScript](#typescript)
