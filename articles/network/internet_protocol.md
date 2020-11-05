@@ -17,29 +17,29 @@
 
 ## 报文格式 Packet Format
 
-![IPv4_headers](../assets/network/IPv4_headers.png)
+![IPv4_headers](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/network/IPv4_headers.png)
 
-* Version：IP 版本。
+-   Version：IP 版本。
 
-* HLen：头部长度，是以 32-bit word 为单位来表示的，如果头部没有包含 Options 字段，这个值就是 5，也就是 20 bytes(32 * 5 / 8)。
+-   HLen：头部长度，是以 32-bit word 为单位来表示的，如果头部没有包含 Options 字段，这个值就是 5，也就是 20 bytes(32 \* 5 / 8)。
 
-* TOS(type of service)：区分服务，一般是为了让程序知道报文是否需要特殊处理，比如报文是否需要放到一个特殊队列中以保证无延时传送。
+-   TOS(type of service)：区分服务，一般是为了让程序知道报文是否需要特殊处理，比如报文是否需要放到一个特殊队列中以保证无延时传送。
 
-* Length：报文的长度，包括了头部和数据，跟 HLen 不同，Length 的计算单位是 byte，这个字段占据 16 bit，也就是说，IP 报文的最大长度是 65,535 bytes (2^16 - 1)；不过，IP 下层的网络不一定支持传送这么大的报文，因此 IP 还需要提供信息包的分割和重组功能。
+-   Length：报文的长度，包括了头部和数据，跟 HLen 不同，Length 的计算单位是 byte，这个字段占据 16 bit，也就是说，IP 报文的最大长度是 65,535 bytes (2^16 - 1)；不过，IP 下层的网络不一定支持传送这么大的报文，因此 IP 还需要提供信息包的分割和重组功能。
 
-* Ident、Flags、Offset：这几个字段都是与分组相关的信息。
+-   Ident、Flags、Offset：这几个字段都是与分组相关的信息。
 
-* TTL(Time to Live)：包的生存时间，目的是分辨出在网络中游离时间过长的包，并将它们丢弃，以免浪费资源。这个值每经过一个路由就会减去 1，等减至 0 的时候包就会被丢弃，目前的默认设置值是 64。
+-   TTL(Time to Live)：包的生存时间，目的是分辨出在网络中游离时间过长的包，并将它们丢弃，以免浪费资源。这个值每经过一个路由就会减去 1，等减至 0 的时候包就会被丢弃，目前的默认设置值是 64。
 
-* Protocol：demultiplexing key，用来决定由哪种上层协议来接收经过 IP 处理的报文。
+-   Protocol：demultiplexing key，用来决定由哪种上层协议来接收经过 IP 处理的报文。
 
-* Checksum：是通过将头部分成 16-bit words 后计算得到的值，目的机接收到报文后会重新计算一遍，如果在传输过程中头部被污染，目的机计算的值和源机计算的值不一样，这个报文就会被丢弃；注意到 Checksum 并不会检查报文的具体数据是否被污染。
+-   Checksum：是通过将头部分成 16-bit words 后计算得到的值，目的机接收到报文后会重新计算一遍，如果在传输过程中头部被污染，目的机计算的值和源机计算的值不一样，这个报文就会被丢弃；注意到 Checksum 并不会检查报文的具体数据是否被污染。
 
-* SourceAddr：用来让目的机决定是否接受这个包，以及目的机作出响应时也需要使用这个字段。
+-   SourceAddr：用来让目的机决定是否接受这个包，以及目的机作出响应时也需要使用这个字段。
 
-* DestinationAddr：用来找到目的机，网络中的路由会根据这个字段来决定如何转发报文。
+-   DestinationAddr：用来找到目的机，网络中的路由会根据这个字段来决定如何转发报文。
 
-* Options、Pad：这两个可选字段并不常用。
+-   Options、Pad：这两个可选字段并不常用。
 
 ## 分割与重组 Fragmentation And Reassembly
 
@@ -58,4 +58,4 @@
 
 跟分割操作不同的是，报文重组只会发生在目的机。无论一个报文在路由的过程中被分割了多少次，这些报文片段都只会在到达目的机之后再被重组。但如果有一个报文分组丢失了，目的机还是会尝试重组其他报文片段，并最终放弃重组，这种无谓地消耗资源的行为可能会导致 denial-of-service 攻击，所以应该尽量避免报文分割。目前推荐使用的方法是 path MTU discovery，也就是找出从源机到目的机这一路上将会遇到的所有网络的最小 MTU，把 IP 报文大小定为这个 MTU 值，从而避免了报文分割。
 
-![](../assets/network/ip_fragmentation.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/network/ip_fragmentation.png)

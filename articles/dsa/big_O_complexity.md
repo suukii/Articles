@@ -120,7 +120,7 @@ function fib(n) {
 
 它的递归树是这样的：
 
-![](../assets/recursion_tree.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/recursion_tree.png)
 
 -   在每个 `fib` 函数中，`fib` 都被调用了两次，所以递归树的最大分支数是 2
 -   递归树的最大深度是 n
@@ -137,7 +137,7 @@ function fib(n) {
 
 也就是，从递归树的顶点出发，选择一条路径一路往下，到达最底下的那个叶子节点(递归出口)，一路上经过了多少个节点。
 
-![](../assets/recursion_tree_stack.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/recursion_tree_stack.png)
 
 一般来说，递归算法的空间复杂度是 O(h)，h 是递归树的最大深度。
 

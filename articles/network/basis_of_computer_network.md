@@ -16,11 +16,11 @@
 
 这根连接线一般是电缆、光纤之类的媒体介质，一般我们把它叫做`链路 link`，而网络中的计算机一般叫做`节点 node`。
 
-![](../assets/network/point_to_point.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/network/point_to_point.png)
 
 这种用一个链路直接连接两台计算机的方式叫做`点对点 point-to-point`连接，还有另一种连接方式，多台计算机可以连接到同一个链路上，叫做`多路访问 multiple-access`，比如 Wi-Fi。
 
-![](../assets/network/multiple_access.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/network/multiple_access.png)
 
 但这种连接方式有两个限制，一是网络可覆盖的范围有限，二是可连接的节点数有限，所以一般这种连接方式都是用于`最后一里 last mile`连接终端用户和互联网的。
 
@@ -28,17 +28,17 @@
 
 当然，计算机之间两两通过链路来连接是可以实现相互通信的目的，但这只适用于网络中只有少数几台计算机的情况。
 
-![](../assets/network/point_to_point_several_computers.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/network/point_to_point_several_computers.png)
 
 如果要通信的计算机很多，那每台计算机上的连接线就会多到难以管理。
 
-![](../assets/network/point_to_point_such_a_mess.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/network/point_to_point_such_a_mess.png)
 
 > 这还是只有几台计算机的情况，连接线看起来已经很乱了，想象下如果现实中互联网上的计算机是用这种方式连接的，那情况就有点难以控制了。
 
 但幸好，要实现两台计算机互相通信，不一定要用链路直接连接它们，我们还可以通过一个中间节点来把它们连接起来。
 
-![](../assets/network/using_router_1.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/network/using_router_1.png)
 
 像这样，每个节点都连接了一个或者多个链路，而那些连接了两个以上链路的节点(图中的 Router)主要是负责把传进来的消息再转发出去，这些 Router 一起组成了一个`交换网络 switched network`(这是一个网络中的网络，网络是可以嵌套的)。
 
@@ -49,7 +49,7 @@
 
 还有一种连接多台计算机设备的方式，我们可以把交换网络抽象出来，用一个节点将它们两两连接，这样就形成了`互联网 internet`。而连接两个网络的节点一般叫做`路由 router`或者`网关 gateway`，它们的功能和上文提到的交换机一样，负责把从一个网络传进来的消息转发给另一个网络。
 
-![](../assets/network/internetwork.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/network/internetwork.png)
 
 互联网自己本身也是一个网络，所以它们也可以被抽象出来，然后通过节点连接起来，形成一个更大的网络，总而言之，这可以是一个递归的过程，所以理论上，我们构建的网络可以是无限大的。
 

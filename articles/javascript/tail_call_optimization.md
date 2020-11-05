@@ -11,21 +11,21 @@
 下面是一个简单的递归：
 
 ```js
-const recursive = (n) => {
-  if (n < 0) return
-  console.log(n)
-  recursive(n - 1)
-}
-recursive(10000)
+const recursive = n => {
+    if (n < 0) return;
+    console.log(n);
+    recursive(n - 1);
+};
+recursive(10000);
 ```
 
 在执行这段代码的时候，JS 引擎会不断地创建新的 `recursive` 执行上下文并推入执行栈中，如果 `n` 足够大，执行栈的内存空间最终会被用完并抛出栈溢出错误。
 
-![](../assets/recursive_call_stack.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/recursive_call_stack.png)
 
 如果我们仔细观察下上面的代码，会发现在调用了 `recursive(n - 1)` 之后，`recursive(n)` 的执行上下文其实已经没用了。因为在 `recursive(n - 1)` 这个操作之后，已经没有别的代码需要用到 `recursive(n)` 上下文中的任何变量了。那么，`recursive(n)` 的执行上下文其实没必要等到 `recursive(n - 1)` 执行完毕之后再出栈，而是在调用 `recursive(n - 1)` 的时候就可以出栈了，这就是尾调用优化。
 
-![](../assets/recursive_call_stack_tco.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/recursive_call_stack_tco.png)
 
 ## 尾调用优化的实现
 
@@ -42,6 +42,6 @@ https://2ality.com/2015/06/tail-call-optimization.html#checking-whether-a-functi
 
 ## 相关资料
 
-- https://v8.dev/blog/modern-javascript#proper-tail-calls
-- https://2ality.com/2015/06/tail-call-optimization.html
-- https://github.com/tc39/proposal-ptc-syntax
+-   https://v8.dev/blog/modern-javascript#proper-tail-calls
+-   https://2ality.com/2015/06/tail-call-optimization.html
+-   https://github.com/tc39/proposal-ptc-syntax

@@ -26,7 +26,7 @@ dig github.com +trace
 
 ## 如何通过递归型 DNS 服务器查询 IP 地址？
 
-![how_dns_works](../assets/dns.png)
+![how_dns_works](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/dns.png)
 
 1. 用户在浏览器中输入 `github.com`；
 2. `github.com` 请求被路由到 DNS 解析程序(一般由 ISP 进行管理)；

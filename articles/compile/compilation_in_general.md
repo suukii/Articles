@@ -11,12 +11,12 @@
 负责词法分析的工具叫做 scanner 或者 lexer，你只要给它一段代码（代码本质上就是一段字符串），它就会给你返回一系列的 token。这些 token 就相当于英语中的单词，单词是组成英语句子的最小有意义单位，而 token 是组成程序的最小有意义单位。比如你喂给 parser 下面这行代码，
 
 ```js
-var average = (min + max) / 2 // this is a comment
+var average = (min + max) / 2; // this is a comment
 ```
 
 parser 会给你吐出来这样一堆 token 来：
 
-![tokens](../assets/tokens_1.png)
+![tokens](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/tokens_1.png)
 
 注意到代码中的空格和注释都被忽略掉了，因为空格是没有意义的，而注释，根据定义它们本来就应该被忽略。
 
@@ -30,10 +30,10 @@ parser 会给你吐出来这样一堆 token 来：
 
 parser 的工作跟这个组装句子的过程很像，不过要更简单些，因为英语句子不仅要语法正确还要意思通顺，而 parser 就只需要考虑语法。它会按照指定的语法来把 token 组成表达式或者语句，并用一个树结构表示出来，这棵树就代表了源代码的逻辑。
 
-![ast](../assets/ast_example_1.png)
+![ast](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/ast_example_1.png)
 
-- 这棵树也有不同名字：parse tree, abstract syntax tree (AST), syntax tree，指的都是同一个东西。
-- 每个语言都有自己的语法，一般编程语言都是使用[上下文无关语法](./context_free_grammar.md)来制定自己的语法的。
+-   这棵树也有不同名字：parse tree, abstract syntax tree (AST), syntax tree，指的都是同一个东西。
+-   每个语言都有自己的语法，一般编程语言都是使用[上下文无关语法](./context_free_grammar.md)来制定自己的语法的。
 
 P.S. 注意到这棵树并没有用到 lexer 给出来的所有 token。Abstract syntax tree 之所以叫 'abstract' 呢，是因为它并没有把代码的所有细节都展示出来(不同于 concrete syntax tree)，它只关心结构和内容相关的部分(可以说是有用的部分吧)。
 
@@ -46,22 +46,22 @@ P.S. 注意到这棵树并没有用到 lexer 给出来的所有 token。Abstract
 经过了词法分析和语法分析之后，我们知道了代码的语法结构，但是要运行程序光知道这些还不够，再来看下这行代码。
 
 ```js
-var average = (min + max) / 2
+var average = (min + max) / 2;
 ```
 
 我们知道要把 `min` 和 `max` 相加，但这两个变量又是从哪里来的呢？它们是局部变量？全局变量？又或者根本没有定义？
 
 在这个阶段，大多数语言会先进行的一个分析步骤叫做 binding ，或者叫 resolution，也就是，
 
-- 每当分析到一个标识符 (identifier) 时，先去找到它的定义，然后将两者关联起来。
-- 作用域大概就是这么一回事了，作用域就是代码中的一块空间，并且规定了在这个空间中哪些标识符是可以被访问到的。
-- 如果是静态语言，就可以在这个阶段进行类型检查了。找到了标识符的定义，也就知道了变量类型，接着就可以检查这个类型是否支持 `+` 操作，如果不支持，就可以抛出错误了。
+-   每当分析到一个标识符 (identifier) 时，先去找到它的定义，然后将两者关联起来。
+-   作用域大概就是这么一回事了，作用域就是代码中的一块空间，并且规定了在这个空间中哪些标识符是可以被访问到的。
+-   如果是静态语言，就可以在这个阶段进行类型检查了。找到了标识符的定义，也就知道了变量类型，接着就可以检查这个类型是否支持 `+` 操作，如果不支持，就可以抛出错误了。
 
 经过本分析阶段得到的信息，还得找个地方储存起来，一般它们可能会被存在：
 
-- AST 中，上个阶段我们得到了一个 AST，所以可以把这些信息存到 AST 的各个节点中去；
-- 一个额外的表中，用各个标识符来作为表的 key，这个表叫做 symbol table；
-- 把 AST 转换成另一种能更直接表示语法的数据结构来存。
+-   AST 中，上个阶段我们得到了一个 AST，所以可以把这些信息存到 AST 的各个节点中去；
+-   一个额外的表中，用各个标识符来作为表的 key，这个表叫做 symbol table；
+-   把 AST 转换成另一种能更直接表示语法的数据结构来存。
 
 **一般把以上三个阶段归为编译过程的 front end，在 front end 中我们的关注点是怎么样把源码用一种抽象的方式表示出来；接下来要讨论的是 back end，在这个阶段我们关注的是怎么根据源码的抽象表示生成机器语言**
 
@@ -82,13 +82,13 @@ var average = (min + max) / 2
 一个简单的优化例子是 constant folding，也就是说，如果有一个表达式总是返回相同的结果，编译器就会把在编译代码中用这个计算结果替代这个表达式，比如以下代码：
 
 ```js
-var area = 3.14 * 0.75 * 2 + 5
+var area = 3.14 * 0.75 * 2 + 5;
 ```
 
 编译器会对它进行编译优化成下面那样子，这样就不需要在运行时进行计算了。
 
 ```js
-var area = 9.71
+var area = 9.71;
 ```
 
 ### 生成代码
@@ -155,10 +155,10 @@ var area = 9.71
 
 ### Compiler & Interpreter
 
-- Compiling: 是指将一段源代码翻译成机器语言或者其他高级语言的过程，这个过程最终会生成 bytecode，或者 machine code，或者另一种高级语言代码。
+-   Compiling: 是指将一段源代码翻译成机器语言或者其他高级语言的过程，这个过程最终会生成 bytecode，或者 machine code，或者另一种高级语言代码。
 
-- Compiler: 将一段源代码翻译成机器语言，但是不运行代码，我们可以自行运行翻译好的代码。
+-   Compiler: 将一段源代码翻译成机器语言，但是不运行代码，我们可以自行运行翻译好的代码。
 
-- Interpreter: 直接运行源代码。
+-   Interpreter: 直接运行源代码。
 
 [Compiler and Interpreter.md](./compiler_and_interpreter.md)

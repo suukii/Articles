@@ -8,14 +8,14 @@
 
 在图中，节点叫做**顶点(vertice)**，表示关系的线叫做**边(edge)**。
 
-![graph](../assets/graph/concept.png)
+![graph](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/graph/concept.png)
 
 更准确地说，图 G 可以定义为 `G = (V, E)`，它由两个集合组成：`V(顶点Vertex)` 和 `E(边Edge)`。
 
 -   V 是**顶点**的集合。
 -   E 是**边**的集合，这个集合中元素的格式是 `(u, v)`，其中 `u` 和 `v` 都是顶点，`(u, v)` 则表示顶点 `u` 和 `v` 之间存在关系。
 
-![graph](../assets/graph/graph_1.png)
+![graph](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/graph/graph_1.png)
 
 上面这个图可以定义为：
 
@@ -47,7 +47,7 @@ G = {V, E} // 图
 
 用邻接矩阵来表示上面定义的那个图：
 
-![graph](../assets/graph/adjacency_matrix.png)
+![graph](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/graph/adjacency_matrix.png)
 
 由于这是一个无向图，所以 `(0, 2)` 表示 `(2, 0)` 也是存在的，也就是 `matrix[0][2]` 和 `matrix[2][0]` 都是 `1`。
 
@@ -73,7 +73,7 @@ G = {V, E} // 图
 
 上面的图用邻接表来表示的话：
 
-![graph](../assets/graph/adjacency_list.png)
+![graph](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/graph/adjacency_list.png)
 
 邻接表相对邻接矩阵来说更节省空间，因为只需要存储实际存在的关系，空间复杂度可以表示为 $O(V + E)$，V 是顶点数量，E 是边的数量；但查找边的时间复杂度就提高到了 $O(N)$，N 为顶点数量，也可表示为 $O(V)$。
 

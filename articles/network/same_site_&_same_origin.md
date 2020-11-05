@@ -4,13 +4,13 @@
 
 `scheme` + `hostname` + `port` 都一样的两个 URL 才会被认为是同源(Same-Origin)，否则就是 Cross-Origin。
 
-![](../assets/same_origin_cross_origin.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/same_origin_cross_origin.png)
 
 ## Site
 
 `Top-level domain (TLD)` + `TLD 前面的那部分 domain` 相同的两个 URL 就是同站(Same-Site)，否则就是 Cross-Site。
 
-![](../assets/same_site_cross_site.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/same_site_cross_site.png)
 
 不过，对于 `.co.jp` 和 `.github.io` 这种 domain，如果只是把 `.jp` 和 `.io` 当作 TLD，这样是不够判断两个 URL 是否 Same-Site 的。所以就有了 effective TLD 这个概念，简写成 `eTLD`，比如以 `.co.jp` 结尾的 URL，它们的 `eTLD` 就是 `.co.jp`。
 
