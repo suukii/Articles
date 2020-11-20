@@ -51,7 +51,8 @@
 -   [图](./articles/dsa/dsa_graph.md)
 -   [二叉树](./articles/dsa/dsa_binary_tree.md)
 -   [前缀树 Trie](./articles/dsa/dsa_trie.md)
--   [AVL 树](./articles/dsa/dsa_avl_tree.md.md)
+-   [AVL 树](./articles/dsa/dsa_avl_tree.md)
+-   [快速选择](./articles/dsa/quick_select.md) 🍨
 
 **排序**
 

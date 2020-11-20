@@ -259,7 +259,7 @@ M[P] extends (action: Action<T>) => Action<U>
 
 这时候 `infer` 关键字就派上用场了。
 
-> 如果你不知道 `infer` 是干什么的，我这里有一篇[小笔记](https://github.com/suukii/Articles/blob/master/articles/typescript_infer.md)，或者去查下文档吧。
+> 如果你不知道 `infer` 是干什么的，我这里有一篇[小笔记](https://github.com/suukii/Articles/blob/master/articles/typescript/typescript_infer.md)，或者去查下文档吧。
 
 有了 `infer` 之后我们就可以这样修改函数签名了
 
