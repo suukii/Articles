@@ -15,6 +15,7 @@
     - [单元测试](#单元测试)
     - [编译](#编译)
     - [杂七杂八](#杂七杂八)
+    - [workflow](#workflow)
 
 ### 浏览器
 
@@ -101,3 +102,9 @@
 
 -   [如何在终端打印出有<b style="background: -webkit-linear-gradient(45deg, #99d4ff, #9384f6);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">颜色</b>的字](./articles/others/print-colored-text-in-terminal.md)
 -   [什么是上下文无关语法 CFG](./articles/context_free_grammar.md)
+
+### workflow
+
+-   [如何监听 git hooks](./articles/workflow/git-hooks.md) 🍧
+-   [如何规范 git commit 信息](./articles/workflow/commitlint.md) 🍰
+-   [如何规范代码风格](./articles/workflow/prettier.md) 🍨
