@@ -56,7 +56,7 @@ module.exports = {
 npx commitlint --from HEAD~1 --to HEAD --verbose
 ```
 
-检查上一次 commit 的信息是否符合规范。
+-   检查上一次 commit 的信息是否符合规范。
 
 当然，这没什么 🥚 用。我们要的是在 commit 前就检查信息是否符合规范，如果不符合就阻止他提交。
 

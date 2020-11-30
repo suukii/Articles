@@ -1,4 +1,4 @@
-# 如何规范代码风格
+# 如何规范代码风格 - prettier
 
 ## Prettier
 
@@ -56,7 +56,7 @@ VSCode 可以安装 `Prettier - Code formatter` 插件。
 
 **ESlint**
 
-如果项目同时也使用 ESlint 的话，需要安装 [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#installation)，它会关掉 ESlint 中不需要的或者跟 prettier 有冲突的规则。
+如果项目同时也使用 ESlint 的话，需要安装 [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier#installation)，然后在 eslint 配置中加上 `extends: ['prettier']`。它会关掉 ESlint 中不需要的或者跟 prettier 有冲突的规则。
 
 -   prettier 是用来规范代码风格的，比如缩进多少、加不加分号之类的。
 -   eslint 更多是用来规范代码质量的，比如能不能有声明了但是不用的变量，能不能定义隐式全局变量这类规则。

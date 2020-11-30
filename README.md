@@ -107,4 +107,5 @@
 
 -   [如何监听 git hooks](./articles/workflow/git-hooks.md) 🍧
 -   [如何规范 git commit 信息](./articles/workflow/commitlint.md) 🍰
--   [如何规范代码风格](./articles/workflow/prettier.md) 🍨
+-   [如何规范代码风格 - prettier](./articles/workflow/prettier.md) 🍨
+-   [如何规范代码质量 - eslint](./articles/workflow/eslint.md) 🍭

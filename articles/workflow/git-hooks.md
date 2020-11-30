@@ -77,9 +77,9 @@ HUSKY=0 git push
 -   `push`
 -   husky 几乎支持 [git 提供的所有 hooks](https://git-scm.com/docs/githooks)
 
-## git hooks 可以做什么
+## 一般用 git hooks 来做什么
 
 -   规范 commit 信息
--   规范代码格式
--   运行测试
+-   规范代码质量/风格
+-   在提交代码前运行测试
 -   ......
