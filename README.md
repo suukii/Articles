@@ -110,3 +110,4 @@
 -   [如何规范代码风格 - prettier](./articles/workflow/prettier.md) 🍨
 -   [如何规范代码质量 - eslint](./articles/workflow/eslint.md) 🍭
 -   [如何发布一个 npm package](./articles/workflow/npm-publish.md) 🚀
+-   [用 Node 写一个 cli](./articles/workflow/build-a-node-cli.md) 🍹
