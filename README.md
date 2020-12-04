@@ -1,6 +1,6 @@
 # 持续更新中...
 
-个人学习笔记。你也可以在 [Gitbook](https://suki.gitbook.io/notes/) 上看，内容是自动同步的。
+个人学习笔记，内容包括前端和算法等。[在线电子书](https://suki.gitbook.io/notes/)。
 
 - [持续更新中...](#持续更新中)
     - [浏览器](#浏览器)
@@ -101,7 +101,7 @@
 ### 杂七杂八
 
 -   [如何在终端打印出有<b style="background: -webkit-linear-gradient(45deg, #99d4ff, #9384f6);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">颜色</b>的字](./articles/others/print-colored-text-in-terminal.md)
--   [什么是上下文无关语法 CFG](./articles/context_free_grammar.md)
+-   [什么是上下文无关语法 CFG](./articles/others/context_free_grammar.md)
 
 ### workflow
 
@@ -109,3 +109,4 @@
 -   [如何规范 git commit 信息](./articles/workflow/commitlint.md) 🍰
 -   [如何规范代码风格 - prettier](./articles/workflow/prettier.md) 🍨
 -   [如何规范代码质量 - eslint](./articles/workflow/eslint.md) 🍭
+-   [如何发布一个 npm package](./articles/workflow/npm-publish.md) 🚀

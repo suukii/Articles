@@ -4,8 +4,8 @@
 
 就像英语语法一样，比如英语语法规定了一个英语句子的构成方式可以是“名词+动词+名词”这种形式，那么根据英语语法：
 
-- `I drink milk` 是一个符合语法的句子
-- `Tom drinks cat` 看起来也是一个符合语法的句子
+-   `I drink milk` 是一个符合语法的句子
+-   `Tom drinks cat` 看起来也是一个符合语法的句子
 
 但其实后者并不是正确的英语句子，为什么呢？因为英语语法并不是 CFG，英语是依赖上下文的，一个句子是否正确不仅要看它的语法构成是否正确，还要从上下文来看它是否能被正确理解，`Tom drinks cat` 很明显不是一个可以被正常理解的句子，所以，虽然它符合“动词+动词+名词”结构，但它并不是一个正确的英语句子。
 
@@ -17,10 +17,10 @@
 
 首先来熟悉一下几个相关词汇：
 
-- Terminals(终结符): 是构成最终语句的成分，比如在英语中，句子由单词组成，所以终结符就是一个个单词。
-- Non Terminals(非终结符)：也被称为变量，可以认为非终结符是终结符或其他非终结符的占位符。
-- Start Symbol(开始变量)：也是一个非终结符，由于是语法规则的开始，所以也被称为开始变量。
-- Production Rules(规则/产生式)：语法规则，用来描述一个句子是怎样产生的。
+-   Terminals(终结符): 是构成最终语句的成分，比如在英语中，句子由单词组成，所以终结符就是一个个单词。
+-   Non Terminals(非终结符)：也被称为变量，可以认为非终结符是终结符或其他非终结符的占位符。
+-   Start Symbol(开始变量)：也是一个非终结符，由于是语法规则的开始，所以也被称为开始变量。
+-   Production Rules(规则/产生式)：语法规则，用来描述一个句子是怎样产生的。
 
 ## 来一个英语栗子
 
@@ -90,7 +90,7 @@ P.S. 上述步骤中所有选择都是随机的。
 
 这些步骤用句子描述太繁琐了，我们还是来看一张图吧，基本上，这就是一个递归操作，用树结构来表示，就清晰多了。
 
-![https://github.com/suukii/Articles/blob/master/assets/CFG_1.png](https://github.com/suukii/Articles/blob/master/assets/CFG_1.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/CFG_1.png)
 
 把树的所有叶子节点，也就是所有终结符连起来，我们就生成了一个句子 `Pretty girls like pink skirts` (BTW, it seems to rhyme!)。这个树一般叫做解析树(Parse Tree)，我们还可以创建另一棵树来生成另一个句子，步骤是一样的，只是其中的选择不同，不同的选择会生成不同的结果，比如 `Pretty skirts like pink girls`。
 
@@ -133,4 +133,4 @@ NonZeroDigit DecimalDigits(opt)
 
 规范中定义了 `DecimalIntegerLiteral` 可以有 2 种生成方式，如果我们选第一种 `0`，因为 `0` 是一个终结符，我们的生成过程就到此结束了，我们生成了一个 `NumericLiteral`，就是 `0`，用树结构来表示生成过程的话就是下图。
 
-![https://github.com/suukii/Articles/blob/master/assets/CFG_2.png](https://github.com/suukii/Articles/blob/master/assets/CFG_2.png)
+![](https://cdn.jsdelivr.net/gh/suukii/Articles/assets/CFG_2.png)

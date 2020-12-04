@@ -181,3 +181,6 @@ npm i -D prettier eslint-plugin-prettier eslint-config-prettier
 3. AST 中每个选择器都会被访问两次，一次“自顶向下”(递)，一次“自底向上”(归)，默认是监听第一次的访问
 4. 每条规则都会监听一个或者多个选择器
 5. 在遍历到某个选择器的时候，如果它有被监听，就触发相应的回调
+
+-   https://www.freecodecamp.org/news/the-essentials-eslint/
+-   https://zhuanlan.zhihu.com/p/53680918

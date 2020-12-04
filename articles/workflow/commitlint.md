@@ -74,3 +74,6 @@ npx commitlint --from HEAD~1 --to HEAD --verbose
     }
 }
 ```
+
+-   https://dev.to/talohana/husky-and-commitlint-for-clean-git-log-44be
+-   https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/

@@ -83,3 +83,5 @@ HUSKY=0 git push
 -   规范代码质量/风格
 -   在提交代码前运行测试
 -   ......
+
+*   https://www.freecodecamp.org/news/how-to-add-commit-hooks-to-git-with-husky-to-automate-code-tasks/
